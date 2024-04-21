@@ -140,6 +140,8 @@ jobs:
 
       - name: Sign container image
         uses: sigstore/cosign-installer@v3.4.0
+
+      - name: Sign actual image
         if: github.event_name != 'pull_request'
         run: |
           cosign sign -y --key env://COSIGN_PRIVATE_KEY ${{ steps.registry_case.outputs.lowercase }}/${{ steps.build_image.outputs.image }}@${TAGS}
