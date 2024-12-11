@@ -19,7 +19,7 @@ rpm-ostree install sssd-idp sssd-passkey sssd-common sssd-krb5 libsss_certmap \
     sssd-common-pac sssd-ldap sssd sssd-ipa sssd-kcm libipa_hbac freeipa-client \
     toolbox samba samba-winbind samba-client cups epson-inkjet-printer-escpr epson-inkjet-printer-escpr2 \
     krb5-workstation krb5-server fedora-packager fedora-packager-kerberos virt-manager virt-viewer \
-    blackbox-terminal podman-tui bootc podman-tui qemu-img ansible
+    blackbox-terminal podman-tui bootc podman-compose qemu-img ansible
 
 # this would install a package from rpmfusion
 #RUN rpm-ostree install vlc
