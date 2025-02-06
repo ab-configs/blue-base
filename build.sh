@@ -11,8 +11,19 @@ RELEASE="$(rpm -E %fedora)"
 # RPMfusion repos are available by default in ublue main images
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
-dnf -y install 'dnf-command(copr)'
-dnf -y copr enable gmaglione/podman-bootc
+cat <<END > /etc/yum.repos.d/podman-bootc.repo
+[copr:copr.fedorainfracloud.org:gmaglione:podman-bootc]
+name=Copr repo for podman-bootc owned by gmaglione
+baseurl=https://download.copr.fedorainfracloud.org/results/gmaglione/podman-bootc/fedora-\$releasever-\$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/gmaglione/podman-bootc/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+END
+
 # this installs a package from fedora repos
 rpm-ostree install sssd-idp sssd-passkey sssd-common sssd-krb5 libsss_certmap \
     libsss_idmap libsss_sudo sssd-client libsss_nss_idmap \
