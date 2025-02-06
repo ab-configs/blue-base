@@ -11,7 +11,7 @@ RELEASE="$(rpm -E %fedora)"
 # RPMfusion repos are available by default in ublue main images
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
-
+dnf -y copr enable gmaglione/podman-bootc
 # this installs a package from fedora repos
 rpm-ostree install sssd-idp sssd-passkey sssd-common sssd-krb5 libsss_certmap \
     libsss_idmap libsss_sudo sssd-client libsss_nss_idmap \
@@ -19,7 +19,7 @@ rpm-ostree install sssd-idp sssd-passkey sssd-common sssd-krb5 libsss_certmap \
     sssd-common-pac sssd-ldap sssd sssd-ipa sssd-kcm libipa_hbac freeipa-client \
     toolbox samba samba-winbind samba-client cups epson-inkjet-printer-escpr epson-inkjet-printer-escpr2 \
     krb5-workstation krb5-server fedora-packager fedora-packager-kerberos virt-manager virt-viewer \
-    blackbox-terminal podman-tui bootc podman-compose qemu-img ansible
+    blackbox-terminal podman-tui bootc podman-compose qemu-img ansible podman-bootc
 
 # this would install a package from rpmfusion
 #RUN rpm-ostree install vlc
