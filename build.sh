@@ -29,7 +29,7 @@ rpm-ostree install sssd-idp sssd-passkey sssd-common sssd-krb5 libsss_certmap \
     libsss_idmap libsss_sudo sssd-client libsss_nss_idmap \
     sssd-krb5-common sssd-nfs-idmap sssd-proxy sssd-ad \
     sssd-common-pac sssd-ldap sssd sssd-ipa sssd-kcm libipa_hbac freeipa-client \
-    toolbox samba samba-winbind samba-client cups epson-inkjet-printer-escpr epson-inkjet-printer-escpr2 \
+    toolbox samba samba-winbind samba-client cups gutenprint-cups cups-printerapp cups-pdf cups-ipptool cups-filters-driverless \
     krb5-workstation krb5-server fedora-packager fedora-packager-kerberos virt-manager virt-viewer \
     blackbox-terminal podman-tui bootc podman-compose qemu-img ansible podman-bootc
 
