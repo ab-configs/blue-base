@@ -36,7 +36,7 @@ ARG SOURCE_IMAGE="silverblue"
 ARG SOURCE_SUFFIX="-main"
 
 ## FEDORA_VERSION arg must be a version built by ublue: eg, 39 or 40
-ARG FEDORA_VERSION="42"
+ARG FEDORA_VERSION="43"
 
 
 ### 2. SOURCE IMAGE
